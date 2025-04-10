@@ -12,10 +12,10 @@ import adminAuthRoutes from "./Routes/AdminAuth.route.js";
 const app = express();
 app.use(
   cors({
-    // origin: process.env.FRONTEND_URL,
-    origin: "*",
-    // methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(bodyParser.urlencoded({ extended: true }));
