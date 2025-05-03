@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import ResponseHandler from "./Utils/ResponseHandler.js";
 import studentRoutes from "./Routes/Student.route.js";
+import studentComplaineRoutes from "./Routes/StudentComplaine.route.js";
 import studentAuthRoutes from "./Routes/StudentAuth.route.js";
 import adminAuthRoutes from "./Routes/AdminAuth.route.js";
 
@@ -32,6 +33,8 @@ app.use("/api/v1/students", studentRoutes);
 
 // Student authentication routes
 app.use("/api/v1/auth/student", studentAuthRoutes);
+// Student complaine routes
+app.use("/api/v1/auth/student/complaine", studentComplaineRoutes);
 
 // Admin authentication routes
 app.use("/api/v1/auth/admin", adminAuthRoutes);
